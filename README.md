@@ -1,4 +1,5 @@
-#vim精简配置
+# vim精简配置
+
 ## 简介
 
 该代码是一份vim的配置脚本, 遵循以下思路去精简配置：
@@ -48,7 +49,7 @@
 
 + 文件搜索插件，支持各种搜索
 
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  
     Plug 'junegunn/fzf.vim'
 
 + c/c++ 头文件源文件快速切换插件，快捷键(F4)
