@@ -32,7 +32,7 @@
 
 + 状态栏及状态栏主题插件
 
-    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline'   
     Plug 'vim-airline/vim-airline-themes'
 
 + 括号自动补全插件
@@ -62,7 +62,7 @@
 
 + 支持本地工程
 
-    Plug 'vim-scripts/DfrankUtil'
+    Plug 'vim-scripts/DfrankUtil'  
     Plug 'vim-scripts/vimprj'
 
 + Doxygen注释风格插件
@@ -71,7 +71,7 @@
 
 + 支持mac上自动切换中英文插件
 
-    Plug 'CodeFalling/fcitx-vim-osx'
+    Plug 'CodeFalling/fcitx-vim-osx'  
     Plug 'CodeFalling/fcitx-remote-for-osx'
 
 ## 效果图
