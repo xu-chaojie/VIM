@@ -110,11 +110,11 @@
 ![](3.png)
 
 
-+ 普通模式按F8跳出搜索代码命令，
-+ 或visual模块下按F8搜索当前选择单词，
-+ 使用ctrlsf插件提供搜索功能，界面如上
++ 普通模式按F8跳出搜索代码命令，输入待搜索单词进行搜索
++ 或visual模式下按F8搜索当前选择单词，
++ 使用ctrlsf插件提供搜索功能，搜索结果可编辑保存
 
-## 使用方法
+## 安装 
 + git clone https://github.com/Hereasalways/VIM.git
 + mv VIM ~/.vim
 + cp ~/.vim/.vimrc ~/.vimrc
