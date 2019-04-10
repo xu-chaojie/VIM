@@ -13,44 +13,65 @@
 
 精心挑选如下插件列表：
 
-异步lint插件
-Plug 'w0rp/ale'            
++ 异步lint插件
 
-Go语言插件
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+    Plug 'w0rp/ale'            
 
-目录树插件
-Plug 'scrooloose/nerdtree'
-符号列表插件
-Plug 'majutsushi/tagbar'
++ Go语言插件
 
-状态栏及状态栏主题插件
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
-括号自动补全插件
-Plug 'Raimondi/delimitMate'
-代码自动补全插件
-Plug 'Shougo/neocomplete.vim'
-代码搜索插件
-Plug 'dyng/ctrlsf.vim'
-文件搜索插件，支持各种搜索
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
++ 目录树插件
 
-c/c++ 头文件源文件快速切换插件，快捷键(F4)
-Plug 'vim-scripts/a.vim'
-代码补全插件
-Plug 'vim-scripts/AutoComplPop'
-支持本地化工程
-Plug 'vim-scripts/DfrankUtil'
-Plug 'vim-scripts/vimprj'
-Doxygen注释风格插件
-Plug 'vim-scripts/DoxygenToolkit.vim'
+    Plug 'scrooloose/nerdtree'
 
-支持mac上自动切换中英文插件
-Plug 'CodeFalling/fcitx-vim-osx'
-Plug 'CodeFalling/fcitx-remote-for-osx'
++ 符号列表插件
+
+    Plug 'majutsushi/tagbar'
+
++ 状态栏及状态栏主题插件
+
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+
++ 括号自动补全插件
+
+    Plug 'Raimondi/delimitMate'
+
++ 代码自动补全插件
+
+    Plug 'Shougo/neocomplete.vim'
+
++ 代码搜索插件
+
+    Plug 'dyng/ctrlsf.vim'
+
++ 文件搜索插件，支持各种搜索
+
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    Plug 'junegunn/fzf.vim'
+
++ c/c++ 头文件源文件快速切换插件，快捷键(F4)
+
+    Plug 'vim-scripts/a.vim'
+
++ 代码补全插件
+
+    Plug 'vim-scripts/AutoComplPop'
+
++ 支持本地工程
+
+    Plug 'vim-scripts/DfrankUtil'
+    Plug 'vim-scripts/vimprj'
+
++ Doxygen注释风格插件
+
+    Plug 'vim-scripts/DoxygenToolkit.vim'
+
++ 支持mac上自动切换中英文插件
+
+    Plug 'CodeFalling/fcitx-vim-osx'
+    Plug 'CodeFalling/fcitx-remote-for-osx'
 
 ## 效果图
 ### 完整界面
@@ -70,18 +91,18 @@ Plug 'CodeFalling/fcitx-remote-for-osx'
 
 除了ctrl+p以外，还有如下搜索快捷键提供各种类型搜索：
 
-nnoremap <c-n>f :FZF<CR>
-nnoremap <c-n>g :GFiles?<CR>
-nnoremap <c-n>b :Buffers<CR>
-nnoremap <c-n>a :Ag<CR>
-nnoremap <c-n>r :Rg<CR>
-nnoremap <c-n>l :BLines<CR>
-nnoremap <c-n>t :BTags<CR>
-nnoremap <c-n>m :Marks<CR>
-nnoremap <c-n>h :History<CR>
-nnoremap <c-n>k :History:<CR>
-nnoremap <c-n>/ :History/<CR>
-nnoremap <c-n>c :Commands<CR>
+    nnoremap <c-n>f :FZF<CR>
+    nnoremap <c-n>g :GFiles?<CR>
+    nnoremap <c-n>b :Buffers<CR>
+    nnoremap <c-n>a :Ag<CR>
+    nnoremap <c-n>r :Rg<CR>
+    nnoremap <c-n>l :BLines<CR>
+    nnoremap <c-n>t :BTags<CR>
+    nnoremap <c-n>m :Marks<CR>
+    nnoremap <c-n>h :History<CR>
+    nnoremap <c-n>k :History:<CR>
+    nnoremap <c-n>/ :History/<CR>
+    nnoremap <c-n>c :Commands<CR>
 
 ### 代码搜索功能
 
