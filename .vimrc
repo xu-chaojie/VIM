@@ -307,13 +307,14 @@ func SetTitle()
         call append(line("."), "")
     else
         call setline(1, "")
-        call append(line("."), "")
     endif
     if expand("%:e") == 'h'
-        call append(line(".")+1, "#ifndef ".toupper(substitute(expand("%:r"), '\/', '_', 'g'))."_H_")
-        call append(line(".")+2, "#define ".toupper(substitute(expand("%:r"), '\/', '_', 'g'))."_H_")
+        call append(line("."), "#ifndef ".toupper(substitute(expand("%:r"), '\/', '_', 'g'))."_H_")
+        call append(line(".")+1, "#define ".toupper(substitute(expand("%:r"), '\/', '_', 'g'))."_H_")
+        call append(line(".")+2, "")
         call append(line(".")+3, "")
-        call append(line(".")+4, "#endif  // ".toupper(substitute(expand("%:r"), '\/', '_', 'g'))."_H_")
+        call append(line(".")+4, "")
+        call append(line(".")+5, "#endif  // ".toupper(substitute(expand("%:r"), '\/', '_', 'g'))."_H_")
     endif
 endfunc
 
