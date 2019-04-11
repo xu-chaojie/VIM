@@ -277,6 +277,7 @@ nnoremap <Space>q :call OpenTerminal()<cr>
 nnoremap <Space>f va}<esc>%
 nnoremap <Space>g va}<esc>
 nnoremap <Space>/ :Dox<CR>
+nnoremap <Space>v :DoxLic<CR>
 nnoremap <Space>n :ALENextWrap<CR> 
 nnoremap <Space>p :ALEPreviousWrap<CR> 
 
@@ -316,11 +317,11 @@ func SetTitle()
     endif
 endfunc
 
-autocmd BufNewFile * normal G
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " others
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"autocmd BufNewFile * normal G
 
 "记忆文件关闭时光标位置
 if has("autocmd")
