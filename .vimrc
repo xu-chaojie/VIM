@@ -180,7 +180,7 @@ nnoremap <c-n>i :CtrlSF
 vmap <c-n>i <Plug>CtrlSFVwordExec
 
 nnoremap zc va}<esc>%zf%
-xnoremap <silent> p p:let @"=@0<CR>
+xnoremap <silent> p p:let @"=@0<CR>:p:let @*=@0<CR>
 noremap Q @q
 
 "列出当前目录文件
