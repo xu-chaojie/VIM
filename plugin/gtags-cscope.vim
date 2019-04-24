@@ -225,27 +225,27 @@ function! s:GtagsCscope()
             :nmap <C-\>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
             ":nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
             " Using 'CTRL-spacebar', the result is displayed in new horizontal window.
-            :nmap <C-@>s :scs find s <C-R>=expand("<cword>")<CR><CR>
-            :nmap <C-@>g :scs find g <C-R>=expand("<cword>")<CR><CR>
-            :nmap <C-@>c :scs find c <C-R>=expand("<cword>")<CR><CR>
-            :nmap <C-@>t :scs find t <C-R>=expand("<cword>")<CR><CR>
-            :nmap <C-@>e :scs find e <C-R>=expand("<cword>")<CR><CR>
-            :nmap <C-@>f :scs find f <C-R>=expand("<cfile>")<CR><CR>
-            :nmap <C-@>i :scs find i <C-R>=expand("<cfile>")<CR><CR>
+            :nmap <C-\>hs :scs find s <C-R>=expand("<cword>")<CR><CR>
+            :nmap <C-\>hg :scs find g <C-R>=expand("<cword>")<CR><CR>
+            :nmap <C-\>hc :scs find c <C-R>=expand("<cword>")<CR><CR>
+            :nmap <C-\>ht :scs find t <C-R>=expand("<cword>")<CR><CR>
+            :nmap <C-\>he :scs find e <C-R>=expand("<cword>")<CR><CR>
+            :nmap <C-\>hf :scs find f <C-R>=expand("<cfile>")<CR><CR>
+            :nmap <C-\>hi :scs find i <C-R>=expand("<cfile>")<CR><CR>
             ":nmap <C-@>d :scs find d <C-R>=expand("<cword>")<CR><CR>
             " Hitting CTRL-space *twice*, the result is displayed in new vertical window.
-            :nmap <C-@><C-@>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>
-            :nmap <C-@><C-@>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>
-            :nmap <C-@><C-@>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>
-            :nmap <C-@><C-@>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>
-            :nmap <C-@><C-@>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>
-            :nmap <C-@><C-@>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
-            :nmap <C-@><C-@>i :vert scs find i <C-R>=expand("<cfile>")<CR><CR>
+            :nmap <C-\>vs :vert scs find s <C-R>=expand("<cword>")<CR><CR>
+            :nmap <C-\>vg :vert scs find g <C-R>=expand("<cword>")<CR><CR>
+            :nmap <C-\>vc :vert scs find c <C-R>=expand("<cword>")<CR><CR>
+            :nmap <C-\>vt :vert scs find t <C-R>=expand("<cword>")<CR><CR>
+            :nmap <C-\>ve :vert scs find e <C-R>=expand("<cword>")<CR><CR>
+            :nmap <C-\>vf :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
+            :nmap <C-\>vi :vert scs find i <C-R>=expand("<cfile>")<CR><CR>
             ":nmap <C-@><C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
 	endif
 	" tag command
-	:nmap <C-\><C-n> :tn<CR>
-	:nmap <C-\><C-p> :tp<CR>
+	:nmap <C-\>n :tn<CR>
+	:nmap <C-\>p :tp<CR>
     endif
 endfunction
 
