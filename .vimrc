@@ -88,11 +88,12 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-Plug 'vim-scripts/a.vim'
 Plug 'vim-scripts/AutoComplPop'
 Plug 'vim-scripts/DfrankUtil'
 Plug 'vim-scripts/vimprj'
 Plug 'vim-scripts/DoxygenToolkit.vim'
+
+Plug 'derekwyatt/vim-fswitch'
 
 Plug 'CodeFalling/fcitx-vim-osx'
 Plug 'CodeFalling/fcitx-remote-for-osx'
@@ -201,8 +202,8 @@ nnoremap <F3> :match incsearch /\<<C-R>=expand("<cword>")<CR>\>/ <CR>
 nnoremap <Space>e :match incsearch /\<<C-R>=expand("<cword>")<CR>\>/ <CR>
 
 "切换头文件与源文件
-nnoremap <F4> :A<CR>
-nnoremap <Space>r :A<CR>
+nnoremap <F4> :FSHere<CR>
+nnoremap <Space>r :FSHere<CR>
 
 "C，C++ 按F5编译运行
 nnoremap <F5> :call CompileRunGcc()<CR>
