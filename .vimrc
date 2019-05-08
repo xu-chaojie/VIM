@@ -94,6 +94,7 @@ Plug 'vim-scripts/vimprj'
 Plug 'vim-scripts/DoxygenToolkit.vim'
 
 Plug 'derekwyatt/vim-fswitch'
+Plug 'kshenoy/vim-signature'
 
 Plug 'CodeFalling/fcitx-vim-osx'
 Plug 'CodeFalling/fcitx-remote-for-osx'
