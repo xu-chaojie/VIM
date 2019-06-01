@@ -4,9 +4,6 @@
 
 set nocompatible  "去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限
 color gruvbox
-"color dracula
-"color hybrid
-"color desert
 set background=dark
 
 "General
@@ -356,8 +353,4 @@ autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> %s/\s\+$//e
 if &term =~ '256color'
   set t_ut=
 endif
-
-"autocmd CursorMoved *.cpp,*.[ch],*.sh,*.rb,*.java,*.py silent! exe printf('match incsearch /\<%s\>/', expand('<cword>'))
-"autocmd CursorHold *.cpp,*.[ch],*.sh,*.rb,*.java,*.py silent! exe printf('match incsearch /\<%s\>/', expand('<cword>'))
-"set updatetime=1000 "CursorHold触发间隔
 
