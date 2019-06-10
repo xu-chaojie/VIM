@@ -236,17 +236,11 @@ nnoremap <Space>y :call FormartSrc()<CR><CR>
 func FormartSrc()
     exec "w"
     if &filetype == 'c'
-        exec "!astyle --style=google --indent=spaces=4 --indent-switches --suffix=none %"
+        exec "!astyle --style=google --indent=spaces=4 --indent-switches --keep-one-line-blocks --suffix=none %"
     elseif &filetype == 'cpp' || &filetype == 'hpp'
-        exec "!astyle --style=google --indent=spaces=4 --indent-switches --suffix=none %"
-    elseif &filetype == 'perl'
-        exec "!astyle --style=gnu --suffix=none %"
-    elseif &filetype == 'py'||&filetype == 'python'
-        exec "r !autopep8 -i --aggressive %"
+        exec "!astyle --style=google --indent=spaces=4 --indent-switches --keep-one-line-blocks --suffix=none %"
     elseif &filetype == 'java'
         exec "!astyle --style=java --suffix=none %"
-    elseif &filetype == 'jsp'
-        exec "!astyle --style=gnu --suffix=none %"
     elseif &filetype == 'xml'
         exec "!astyle --style=gnu --suffix=none %"
     else
