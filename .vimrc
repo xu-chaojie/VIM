@@ -238,7 +238,7 @@ func FormartSrc()
     if &filetype == 'c'
         exec "!astyle --style=google --indent=spaces=4 --indent-switches --suffix=none %"
     elseif &filetype == 'cpp' || &filetype == 'hpp'
-        exec "r !astyle --style=google --indent=spaces=4 --indent-switches --suffix=none %> /dev/null 2>&1"
+        exec "!astyle --style=google --indent=spaces=4 --indent-switches --suffix=none %"
     elseif &filetype == 'perl'
         exec "!astyle --style=gnu --suffix=none %"
     elseif &filetype == 'py'||&filetype == 'python'
