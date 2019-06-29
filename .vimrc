@@ -41,6 +41,12 @@ set confirm         " 在处理未保存或只读文件的时候，弹出确认
 "set autochdir       " 打开文件时自动切换到文件所在的目录
 set vb t_vb= "去掉错误提示声音
 
+"如果行尾有多余的空格（包括 Tab 键），该配置将让这些空格显示成可见的小方块
+set listchars=tab:»■,trail:■
+"显示行尾
+set list
+
+
 if has('statusline')
         set laststatus=2
         set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}   "状态行显示的内容
@@ -209,7 +215,7 @@ func! CompileRunGcc()
         exec "!g++ % -o %<"
         exec "!time ./%<"
     elseif &filetype == 'cpp'
-        exec "!g++ % -std=c++11 -g -o %<"
+        exec "!g++ % -std=c++14 -g -o %<"
         exec "!time ./%<"
     elseif &filetype == 'java'
         exec "!javac %"
