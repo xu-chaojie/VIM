@@ -14,6 +14,8 @@ set mouse=a " 可以在buffer的任何地方使用鼠标（类似office中在工
 set clipboard=unnamed
 set nobackup                     "不自动保存
 set noswapfile
+set undofile
+set undodir=~/.vim/.undo//
 
 set iskeyword+=_  " 单词分割
 set iskeyword-=. " '.' is an end of word designator
