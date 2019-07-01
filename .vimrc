@@ -190,7 +190,7 @@ nnoremap <c-n>o :TagbarOpen fj<CR>
 nnoremap <c-n>i :CtrlSF 
 vmap <c-n>i <Plug>CtrlSFVwordExec
 
-nnoremap zc va}<esc>%zf%
+nnoremap zc [{zf%
 xnoremap <silent> p p:silent! let @"=@0<CR>:silent! let @*=@0<CR>
 noremap Q @q
 
@@ -279,8 +279,6 @@ endf
 nnoremap <F10> :call OpenTerminal()<cr>
 nnoremap <Space>q :call OpenTerminal()<cr>
 
-nnoremap <Space>f va}<esc>%
-nnoremap <Space>g va}<esc>
 nnoremap <Space>/ :Dox<CR>
 nnoremap <Space>v :DoxLic<CR>
 nnoremap <Space>n :ALENextWrap<CR> 
