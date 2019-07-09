@@ -170,7 +170,6 @@ let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++11 -I./'
 " 键盘映射
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <c-p> :GFiles<CR>
-nnoremap <c-n>v :vs<CR>:GFiles<CR>
 
 nnoremap <c-n>f :FZF<CR>
 nnoremap <c-n>g :GFiles?<CR>
@@ -185,18 +184,14 @@ nnoremap <c-n>k :History:<CR>
 nnoremap <c-n>/ :History/<CR>
 nnoremap <c-n>c :Commands<CR>
 
-nnoremap <c-n>w :NERDTreeFind<CR>
-nnoremap <c-n>o :TagbarOpen fj<CR>
-nnoremap <c-n>i :CtrlSF 
-vmap <c-n>i <Plug>CtrlSFVwordExec
 
 nnoremap zc [{zf%
 xnoremap <silent> p p:silent! let @"=@0<CR>:silent! let @*=@0<CR>
 noremap Q @q
 
 "列出当前目录文件
-nnoremap <F2> :NERDTreeToggle<CR>
-inoremap <F2> <ESC> :NERDTreeToggle<CR>
+nnoremap <F2> :NERDTreeFind<CR>
+inoremap <F2> <ESC> :NERDTreeFind<CR>
 nnoremap <Space>w :NERDTreeToggle<CR>
 
 "高亮当前单词
@@ -266,8 +261,8 @@ nnoremap <Space>i :CtrlSF
 vmap <F8> <Plug>CtrlSFVwordExec
 vmap <Space>i <Plug>CtrlSFVwordExec
 
-nnoremap <F9> :TagbarToggle<CR>
-nnoremap <Space>o :TagbarToggle<CR>
+nnoremap <F9> :TagbarOpen fj<CR>
+nnoremap <Space>o :TagbarOpen fj<CR>
 
 
 fu! OpenTerminal()
