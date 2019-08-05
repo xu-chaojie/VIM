@@ -194,9 +194,8 @@ nnoremap <F2> :NERDTreeFind<CR>
 inoremap <F2> <ESC> :NERDTreeFind<CR>
 nnoremap <Space>w :NERDTreeToggle<CR>
 
-"高亮当前单词
-nnoremap <F3> :match incsearch /\<<C-R>=expand("<cword>")<CR>\>/ <CR>
-nnoremap <Space>e :match incsearch /\<<C-R>=expand("<cword>")<CR>\>/ <CR>
+nnoremap <F3> :TagbarOpen fj<CR>
+nnoremap <Space>e :TagbarToggle<CR>
 
 "切换头文件与源文件
 nnoremap <F4> :FSHere<CR>
@@ -261,9 +260,9 @@ nnoremap <Space>i :CtrlSF
 vmap <F8> <Plug>CtrlSFVwordExec
 vmap <Space>i <Plug>CtrlSFVwordExec
 
-nnoremap <F9> :TagbarOpen fj<CR>
-nnoremap <Space>o :TagbarOpen fj<CR>
-
+"高亮当前单词
+nnoremap <F9> :match incsearch /\<<C-R>=expand("<cword>")<CR>\>/ <CR>
+nnoremap <Space>o :match incsearch /\<<C-R>=expand("<cword>")<CR>\>/ <CR>
 
 fu! OpenTerminal()
    " open split windows on the topleft
