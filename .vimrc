@@ -44,7 +44,7 @@ set confirm         " 在处理未保存或只读文件的时候，弹出确认
 set vb t_vb= "去掉错误提示声音
 
 "如果行尾有多余的空格（包括 Tab 键），该配置将让这些空格显示成可见的小方块
-set listchars=tab:»·,trail:·
+set listchars=tab:»\ ,trail:·
 "显示行尾
 set list
 
