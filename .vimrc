@@ -92,6 +92,7 @@ Plug 'Shougo/neocomplete.vim'
 Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-fugitive'
 
 Plug 'vim-scripts/AutoComplPop'
 Plug 'vim-scripts/DfrankUtil'
@@ -180,9 +181,9 @@ nnoremap <c-n>l :BLines<CR>
 nnoremap <c-n>t :BTags<CR>
 nnoremap <c-n>m :Marks<CR>
 nnoremap <c-n>h :History<CR>
-nnoremap <c-n>k :History:<CR>
+nnoremap <c-n>k :Commands<CR>
 nnoremap <c-n>/ :History/<CR>
-nnoremap <c-n>c :Commands<CR>
+nnoremap <c-n>c :BCommits<CR>
 
 
 nnoremap zc [{zf%
