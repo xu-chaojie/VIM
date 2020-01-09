@@ -37,7 +37,7 @@ set wildmenu
 set wildmode=list:longest,full
 set whichwrap+=<,>,h,l
 set selection=inclusive "指定在选择文本时，光标所在位置属于被选中的范围
-set scrolloff=3     " 光标移动到buffer的顶部和底部时保持3行距离
+set scrolloff=9     " 光标移动到buffer的顶部和底部时保持x行距离
 set showcmd         " 输入的命令显示出来，看的清楚些
 set confirm         " 在处理未保存或只读文件的时候，弹出确认
 "set autochdir       " 打开文件时自动切换到文件所在的目录
