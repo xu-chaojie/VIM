@@ -79,7 +79,7 @@ lan tim en_US.UTF-8
 
 call plug#begin('~/.vim/plug')
 
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'scrooloose/nerdtree'
