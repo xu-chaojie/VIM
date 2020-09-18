@@ -80,7 +80,7 @@ lan tim en_US.UTF-8
 call plug#begin('~/.vim/plug')
 
 Plug 'dense-analysis/ale'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
@@ -93,6 +93,7 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 Plug 'vim-scripts/AutoComplPop'
 Plug 'vim-scripts/DfrankUtil'
