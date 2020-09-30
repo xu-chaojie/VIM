@@ -88,7 +88,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'Raimondi/delimitMate'
-Plug 'Shougo/neocomplete.vim'
 Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -122,15 +121,16 @@ let NERDTreeShowLineNumbers=1
 "打开文件时不进行检查
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
+let g:ale_completion_enabled = 1
+let g:ale_linters = {
+\   'cpp': ['cc', 'cpplint', 'cppcheck'],
+\}
 
 "Plug 'vim-airline/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#extensions#tagbar#enabled = 0 "与tagbar冲突，禁用airline的tagbar扩展
-
-"Plug 'Shougo/neocomplete.vim'
-let g:neocomplete#enable_at_startup = 1
 
 "Plug 'majutsushi/tagbar'
 let g:tagbar_type_markdown = {
