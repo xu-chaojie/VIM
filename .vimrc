@@ -79,7 +79,6 @@ lan tim en_US.UTF-8
 
 call plug#begin('~/.vim/plug')
 
-Plug 'dense-analysis/ale'
 "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'scrooloose/nerdtree'
@@ -87,6 +86,7 @@ Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Raimondi/delimitMate'
 Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -95,8 +95,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'vim-scripts/AutoComplPop'
-Plug 'vim-scripts/DfrankUtil'
-Plug 'vim-scripts/vimprj'
 Plug 'vim-scripts/DoxygenToolkit.vim'
 
 Plug 'derekwyatt/vim-fswitch'
@@ -116,15 +114,6 @@ call plug#end()
 "autocmd vimenter * if !argc() | NERDTree | wincmd w | endif
 
 let NERDTreeShowLineNumbers=1
-
-"Plug 'w0rp/ale'
-"打开文件时不进行检查
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 0
-let g:ale_completion_enabled = 1
-let g:ale_linters = {
-\   'cpp': ['cc', 'cpplint', 'cppcheck'],
-\}
 
 "Plug 'vim-airline/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
@@ -160,13 +149,6 @@ let g:ctrlsf_auto_focus = {
 "Plug 'jsfaint/gen_tags.vim'
 let g:gen_tags#gtags_auto_gen=1
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vimprj
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-let g:vimprj_prjname=''
-let g:ale_c_gcc_options = '-Wall -O2 -std=c99 -I./'
-let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++11 -I./'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 键盘映射
@@ -277,8 +259,6 @@ nnoremap <Space>q :call OpenTerminal()<cr>
 
 nnoremap <Space>/ :Dox<CR>
 nnoremap <Space>v :DoxLic<CR>
-nnoremap <Space>n :ALENextWrap<CR> 
-nnoremap <Space>p :ALEPreviousWrap<CR> 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 新文件标题

@@ -7,69 +7,6 @@
 1. 尽可能不改变vim原生快捷键和配置
 2. 尽可能精简插件，只保留当前github最热最实用插件
 3. 插件的快捷键尽可能不使用vim原有快捷键，防止覆盖vim原有功能
-4. 不使用you-complete-me这种重量级插件，失去vim轻量级开发环境的优势
-
-## 插件列表
-
-+ 异步lint插件
-
-    Plug 'w0rp/ale'            
-
-+ Go语言插件
-
-    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
-+ 目录树插件
-
-    Plug 'scrooloose/nerdtree'
-
-+ 符号列表插件
-
-    Plug 'majutsushi/tagbar'
-
-+ 状态栏及状态栏主题插件
-
-    Plug 'vim-airline/vim-airline'   
-    Plug 'vim-airline/vim-airline-themes'
-
-+ 括号自动补全插件
-
-    Plug 'Raimondi/delimitMate'
-
-+ 代码自动补全插件
-
-    Plug 'Shougo/neocomplete.vim'
-
-+ 代码搜索插件
-
-    Plug 'dyng/ctrlsf.vim'
-
-+ 文件搜索插件，支持各种搜索
-
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  
-    Plug 'junegunn/fzf.vim'
-
-+ c/c++ 头文件源文件快速切换插件，快捷键(F4)
-
-    Plug 'vim-scripts/a.vim'
-
-+ 代码补全插件
-
-    Plug 'vim-scripts/AutoComplPop'
-
-+ 支持本地工程
-
-    Plug 'vim-scripts/DfrankUtil'  
-    Plug 'vim-scripts/vimprj'
-
-+ Doxygen注释风格插件
-
-    Plug 'vim-scripts/DoxygenToolkit.vim'
-
-+ 支持mac上自动切换中英文插件
-
-    Plug 'CodeFalling/fcitx-vim-osx'  
-    Plug 'CodeFalling/fcitx-remote-for-osx'
 
 ## 效果图
 ### 完整界面
@@ -116,6 +53,21 @@
 + mv VIM ~/.vim
 + cp ~/.vim/.vimrc ~/.vimrc
 + 打开vim, 执行:PlugInstall
-+ 安装ctags, gtags, astyle, lua, the\_silver\_searcher, fcitx-remote-for-osx, python@2
++ 安装ctags, gtags, astyle, lua, the\_silver\_searcher, fcitx-remote-for-osx, python3, clangd/ccls
+
+## vim 编译配置参考
+
+```
+./configure --with-features=huge \
+            --enable-multibyte \
+            --enable-rubyinterp=yes \
+            --enable-perlinterp=yes \
+            --enable-luainterp=yes \
+            --with-lua-prefix=/usr/ \
+            --enable-cscope \
+            --prefix=/home/xuchaojie/vim8 \
+            --enable-python3interp=yes \
+            --with-python3-command=python3
+```
 
 
