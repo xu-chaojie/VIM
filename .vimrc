@@ -323,7 +323,7 @@ au FileType html setlocal dict+=~/.vim/dict/javascript.dict
 au FileType html setlocal dict+=~/.vim/dict/css.dict
 
 "自动删除行尾空格
-autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> %s/\s\+$//e
+"autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> %s/\s\+$//e
 
 " 防止tmux下vim的背景色显示异常
 if &term =~ '256color'
