@@ -3,8 +3,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set nocompatible  "去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限
-color gruvbox
-set background=dark
 
 "General
 filetype plugin indent on     " required!
@@ -79,7 +77,7 @@ lan tim en_US.UTF-8
 
 call plug#begin('~/.vim/plug')
 
-"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'morhetz/gruvbox'
 
 Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
@@ -104,11 +102,17 @@ Plug 'jsfaint/gen_tags.vim'
 Plug 'CodeFalling/fcitx-vim-osx'
 Plug 'CodeFalling/fcitx-remote-for-osx'
 
+"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 插件配置
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"Plug 'morhetz/gruvbox'
+colorscheme gruvbox
+set background=dark
 
 "当打开vim且没有文件时自动打开NERDTree
 "autocmd vimenter * if !argc() | NERDTree | wincmd w | endif
