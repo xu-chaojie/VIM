@@ -162,8 +162,6 @@ nnoremap <c-p> :GFiles<CR>
 nnoremap <c-n>f :FZF<CR>
 nnoremap <c-n>g :GFiles?<CR>
 nnoremap <c-n>b :Buffers<CR>
-nnoremap <c-n>a :Ag<CR>
-nnoremap <c-n>r :Rg<CR>
 nnoremap <c-n>l :BLines<CR>
 nnoremap <c-n>t :BTags<CR>
 nnoremap <c-n>m :Marks<CR>
@@ -172,6 +170,10 @@ nnoremap <c-n>k :Commands<CR>
 nnoremap <c-n>/ :History/<CR>
 nnoremap <c-n>c :BCommits<CR>
 
+nmap <silent> <c-n>d <Plug>(coc-definition)
+nmap <silent> <c-n>y <Plug>(coc-type-definition)
+nmap <silent> <c-n>i <Plug>(coc-implementation)
+nmap <silent> <c-n>r <Plug>(coc-references)
 
 nnoremap zc [{zf%
 xnoremap <silent> p p:silent! let @"=@0<CR>:silent! let @*=@0<CR>
