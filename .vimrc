@@ -86,20 +86,19 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Raimondi/delimitMate'
+Plug 'vim-scripts/AutoComplPop'
+
 Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-
-Plug 'vim-scripts/AutoComplPop'
-Plug 'vim-scripts/DoxygenToolkit.vim'
 
 Plug 'derekwyatt/vim-fswitch'
 Plug 'kshenoy/vim-signature'
+ 
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
-Plug 'CodeFalling/fcitx-vim-osx'
-Plug 'CodeFalling/fcitx-remote-for-osx'
+Plug 'vim-scripts/DoxygenToolkit.vim'
 
 call plug#end()
 
