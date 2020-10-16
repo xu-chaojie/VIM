@@ -79,8 +79,8 @@ call plug#begin('~/.vim/plug')
 
 Plug 'morhetz/gruvbox'
 
-Plug 'scrooloose/nerdtree'
-Plug 'majutsushi/tagbar'
+Plug 'preservim/nerdtree'
+Plug 'preservim/tagbar'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -121,7 +121,6 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#extensions#tagbar#enabled = 0 "与tagbar冲突，禁用airline的tagbar扩展
 
-"Plug 'majutsushi/tagbar'
 let g:tagbar_type_markdown = {
     \ 'ctagstype': 'markdown',
     \ 'ctagsbin' : '~/.vim/plugin/markdown2ctags.py',

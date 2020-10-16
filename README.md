@@ -51,7 +51,7 @@
 + mv VIM ~/.vim
 + cp ~/.vim/.vimrc ~/.vimrc
 + 打开vim, 执行:PlugInstall
-+ 安装astyle, the\_silver\_searcher, fcitx-remote-for-osx, python3, clangd/ccls
++ 安装astyle, the\_silver\_searcher, clangd/ccls
 
 ## vim 编译配置参考
 
