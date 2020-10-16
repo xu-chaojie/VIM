@@ -97,12 +97,9 @@ Plug 'vim-scripts/DoxygenToolkit.vim'
 
 Plug 'derekwyatt/vim-fswitch'
 Plug 'kshenoy/vim-signature'
-Plug 'jsfaint/gen_tags.vim'
 
 Plug 'CodeFalling/fcitx-vim-osx'
 Plug 'CodeFalling/fcitx-remote-for-osx'
-
-"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
 
@@ -149,10 +146,6 @@ let g:tagbar_show_linenumbers = -1
 let g:ctrlsf_auto_focus = {
     \ "at": "start"
     \ }
-
-"Plug 'jsfaint/gen_tags.vim'
-let g:gen_tags#gtags_auto_gen=1
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 键盘映射
