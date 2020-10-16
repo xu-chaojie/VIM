@@ -29,8 +29,6 @@
     nnoremap <c-n>f :FZF<CR>
     nnoremap <c-n>g :GFiles?<CR>
     nnoremap <c-n>b :Buffers<CR>
-    nnoremap <c-n>a :Ag<CR>
-    nnoremap <c-n>r :Rg<CR>
     nnoremap <c-n>l :BLines<CR>
     nnoremap <c-n>t :BTags<CR>
     nnoremap <c-n>m :Marks<CR>
@@ -53,7 +51,7 @@
 + mv VIM ~/.vim
 + cp ~/.vim/.vimrc ~/.vimrc
 + 打开vim, 执行:PlugInstall
-+ 安装ctags, gtags, astyle, lua, the\_silver\_searcher, fcitx-remote-for-osx, python3, clangd/ccls
++ 安装astyle, the\_silver\_searcher, fcitx-remote-for-osx, python3, clangd/ccls
 
 ## vim 编译配置参考
 
