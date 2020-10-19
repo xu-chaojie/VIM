@@ -94,6 +94,7 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'derekwyatt/vim-fswitch'
 Plug 'kshenoy/vim-signature'
+Plug 'tpope/vim-unimpaired'
  
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -165,6 +166,28 @@ nmap <silent> <c-n>d <Plug>(coc-definition)
 nmap <silent> <c-n>y <Plug>(coc-type-definition)
 nmap <silent> <c-n>i <Plug>(coc-implementation)
 nmap <silent> <c-n>r <Plug>(coc-references)
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+xmap if <Plug>(coc-funcobj-i)
+omap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap af <Plug>(coc-funcobj-a)
+xmap ic <Plug>(coc-classobj-i)
+omap ic <Plug>(coc-classobj-i)
+xmap ac <Plug>(coc-classobj-a)
+omap ac <Plug>(coc-classobj-a)
+
+nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
 
 nnoremap zc [{zf%
 xnoremap <silent> p p:silent! let @"=@0<CR>:silent! let @*=@0<CR>
