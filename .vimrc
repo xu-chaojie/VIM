@@ -188,6 +188,7 @@ xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
 
 nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent><nowait> <space>f  :<C-u>CocList outline<cr>
 
 nnoremap zc [{zf%
 xnoremap <silent> p p:silent! let @"=@0<CR>:silent! let @*=@0<CR>
