@@ -47,7 +47,7 @@
 + 使用ctrlsf插件提供搜索功能，搜索结果可编辑保存
 
 ## 安装 
-+ git clone https://github.com/Hereasalways/VIM.git
++ git clone https://github.com/xu-chaojie/VIM.git
 + mv VIM ~/.vim
 + cp ~/.vim/.vimrc ~/.vimrc
 + 打开vim, 执行:PlugInstall
@@ -63,7 +63,7 @@
             --enable-luainterp=yes \
             --with-lua-prefix=/usr/ \
             --enable-cscope \
-            --prefix=/home/xuchaojie/vim8 \
+            --prefix=/usr/local/bin/vim \
             --enable-python3interp=yes \
             --with-python3-command=python3
 ```
