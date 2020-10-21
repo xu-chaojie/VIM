@@ -114,6 +114,8 @@ set background=dark
 "当打开vim且没有文件时自动打开NERDTree
 "autocmd vimenter * if !argc() | NERDTree | wincmd w | endif
 
+"Use NERDTree and netrw both
+let NERDTreeHijackNetrw=0
 let NERDTreeShowLineNumbers=1
 
 "Plug 'vim-airline/vim-airline'
@@ -122,6 +124,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#extensions#tagbar#enabled = 0 "与tagbar冲突，禁用airline的tagbar扩展
 
+"Plug preservim/tagbar"
 let g:tagbar_type_markdown = {
     \ 'ctagstype': 'markdown',
     \ 'ctagsbin' : '~/.vim/plugin/markdown2ctags.py',
