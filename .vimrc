@@ -117,6 +117,7 @@ set background=dark
 "Use NERDTree and netrw both
 let NERDTreeHijackNetrw=0
 let NERDTreeShowLineNumbers=1
+let g:netrw_list_hide= netrw_gitignore#Hide()
 
 "Plug 'vim-airline/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
