@@ -153,58 +153,11 @@ let g:ctrlsf_auto_focus = {
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 键盘映射
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <c-p> :GFiles<CR>
-
-nnoremap <c-n>f :FZF<CR>
-nnoremap <c-n>g :GFiles?<CR>
-nnoremap <c-n>b :Buffers<CR>
-nnoremap <c-n>l :BLines<CR>
-nnoremap <c-n>t :BTags<CR>
-nnoremap <c-n>m :Marks<CR>
-nnoremap <c-n>h :History<CR>
-nnoremap <c-n>k :Commands<CR>
-nnoremap <c-n>/ :History/<CR>
-nnoremap <c-n>c :BCommits<CR>
-
-nmap <silent> <c-n>d <Plug>(coc-definition)
-nmap <silent> <c-n>y <Plug>(coc-type-definition)
-nmap <silent> <c-n>i <Plug>(coc-implementation)
-nmap <silent> <c-n>r <Plug>(coc-references)
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  elseif (coc#rpc#ready())
-    call CocActionAsync('doHover')
-  else
-    execute '!' . &keywordprg . " " . expand('<cword>')
-  endif
-endfunction
-
-xmap if <Plug>(coc-funcobj-i)
-omap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap af <Plug>(coc-funcobj-a)
-xmap ic <Plug>(coc-classobj-i)
-omap ic <Plug>(coc-classobj-i)
-xmap ac <Plug>(coc-classobj-a)
-omap ac <Plug>(coc-classobj-a)
-
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
-nnoremap <silent><nowait> <space>f  :<C-u>CocList outline<cr>
-
-nnoremap zc [{zf%
-xnoremap <silent> p p:silent! let @"=@0<CR>:silent! let @*=@0<CR>
-noremap Q @q
 
 "列出当前目录文件
 nnoremap <F2> :NERDTreeFind<CR>
 inoremap <F2> <ESC> :NERDTreeFind<CR>
 nnoremap <Space>w :NERDTreeToggle<CR>
-
-nnoremap <F3> :TagbarOpen fj<CR>
-nnoremap <Space>e :TagbarToggle<CR>
 
 "切换头文件与源文件
 nnoremap <F4> :FSHere<CR>
@@ -263,27 +216,70 @@ endfunc
 "结束定义FormartSrc
 
 "查找单词
-nnoremap <F8> :CtrlSF 
-nnoremap <Space>i :CtrlSF 
+nnoremap <F7> :CtrlSF 
+nnoremap <Space>u :CtrlSF 
 "查找选中的单词
-vmap <F8> <Plug>CtrlSFVwordExec
-vmap <Space>i <Plug>CtrlSFVwordExec
+vmap <F7> <Plug>CtrlSFVwordExec
+vmap <Space>u <Plug>CtrlSFVwordExec
 
 "高亮当前单词
-nnoremap <F9> :match incsearch /\<<C-R>=expand("<cword>")<CR>\>/ <CR>
-nnoremap <Space>o :match incsearch /\<<C-R>=expand("<cword>")<CR>\>/ <CR>
+nnoremap <F8> :match Search /\<<C-R>=expand("<cword>")<CR>\>/ <CR>:silent! let @/ = "<C-R>=expand("<cword>")<CR>" <CR>
+nnoremap <Space>i :match Search /\<<C-R>=expand("<cword>")<CR>\>/ <CR>:silent! let @/ = "<C-R>=expand("<cword>")<CR>" <CR>
 
-fu! OpenTerminal()
-   " open split windows on the topleft
-   topleft vsplit
-   :call term_start('bash', {'curwin' : 1, 'term_finish' : 'close'})
-endf
+nnoremap <F9> :TagbarOpen fj<CR>
+nnoremap <Space>o :TagbarToggle<CR>
 
-nnoremap <F10> :call OpenTerminal()<cr>
-nnoremap <Space>q :call OpenTerminal()<cr>
+" Space
+nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent><nowait> <space>f  :<C-u>CocList outline<cr>
 
 nnoremap <Space>/ :Dox<CR>
 nnoremap <Space>v :DoxLic<CR>
+
+" <c-n> <c-p>
+nnoremap <c-p> :GFiles<CR>
+
+nnoremap <c-n>f :FZF<CR>
+nnoremap <c-n>g :GFiles?<CR>
+nnoremap <c-n>b :Buffers<CR>
+nnoremap <c-n>l :BLines<CR>
+nnoremap <c-n>t :BTags<CR>
+nnoremap <c-n>m :Marks<CR>
+nnoremap <c-n>h :History<CR>
+nnoremap <c-n>k :Commands<CR>
+nnoremap <c-n>/ :History/<CR>
+nnoremap <c-n>c :BCommits<CR>
+
+nmap <silent> <c-n>d <Plug>(coc-definition)
+nmap <silent> <c-n>y <Plug>(coc-type-definition)
+nmap <silent> <c-n>i <Plug>(coc-implementation)
+nmap <silent> <c-n>r <Plug>(coc-references)
+
+" others
+nnoremap zc [{zf%
+xnoremap <silent> p p:silent! let @"=@0<CR>:silent! let @*=@0<CR>
+noremap Q @q
+
+xmap if <Plug>(coc-funcobj-i)
+omap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap af <Plug>(coc-funcobj-a)
+xmap ic <Plug>(coc-classobj-i)
+omap ic <Plug>(coc-classobj-i)
+xmap ac <Plug>(coc-classobj-a)
+omap ac <Plug>(coc-classobj-a)
+
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 新文件标题
