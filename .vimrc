@@ -224,8 +224,8 @@ vmap <Space>u <Plug>CtrlSFVwordExec
 
 "高亮当前单词
 "nnoremap <F8> :match incsearch /\<<C-R>=expand("<cword>")<CR>\>/ <CR>
-nnoremap <F8> :silent! let @/ = "<C-R>=expand("<cword>")<CR>" <CR>:set hls<CR>
-nnoremap <Space>i :silent! let @/ = "<C-R>=expand("<cword>")<CR>" <CR>:set hls<CR>
+nnoremap <F8> :silent! let @/ = "\\<<C-R>=expand("<cword>")<CR>\\>" <CR>:set hls<CR>
+nnoremap <Space>i :silent! let @/ = "\\<<C-R>=expand("<cword>")<CR>\\>" <CR>:set hls<CR>
 
 nnoremap <F9> :TagbarOpen fj<CR>
 nnoremap <Space>o :TagbarToggle<CR>
