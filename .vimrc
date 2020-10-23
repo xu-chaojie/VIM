@@ -64,7 +64,7 @@ set sw=4 " 统一缩进为4
 set et  "使用空格代替制表符
 set softtabstop=4 "按退格键时可以一次删掉4个空格
 set nojoinspaces " Prevents inserting two spaces after punctuation on a join (J)
-"set splitright " Puts new vsplit windows to the right of the current
+set splitright " Puts new vsplit windows to the right of the current
 "set splitbelow " Puts new split windows to the bottom of the current
 set lbr "不在单词中间断行
 set fo+=mB "打开断行模块对亚洲语言支持
