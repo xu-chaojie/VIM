@@ -86,7 +86,6 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Raimondi/delimitMate'
-Plug 'vim-scripts/AutoComplPop'
 
 Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
