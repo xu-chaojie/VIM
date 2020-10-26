@@ -48,8 +48,8 @@ set list
 
 
 if has('statusline')
-        set laststatus=2
-        set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}   "状态行显示的内容
+    set laststatus=2
+    set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}   "状态行显示的内容
 endif
 
 "highlight CursorLine term=NONE cterm=NONE  ctermbg=234  guibg=Grey40
@@ -95,7 +95,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'derekwyatt/vim-fswitch'
 Plug 'kshenoy/vim-signature'
 Plug 'tpope/vim-unimpaired'
- 
+
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
@@ -127,19 +127,19 @@ let g:airline#extensions#tagbar#enabled = 0 "与tagbar冲突，禁用airline的t
 
 "Plug preservim/tagbar"
 let g:tagbar_type_markdown = {
-    \ 'ctagstype': 'markdown',
-    \ 'ctagsbin' : '~/.vim/plugin/markdown2ctags.py',
-    \ 'ctagsargs' : '-f - --sort=yes',
-    \ 'kinds' : [
-        \ 's:sections',
-        \ 'i:images'
-    \ ],
-    \ 'sro' : '|',
-    \ 'kind2scope' : {
-        \ 's' : 'section',
-    \ },
-    \ 'sort': 0,
-\ }
+            \ 'ctagstype': 'markdown',
+            \ 'ctagsbin' : '~/.vim/plugin/markdown2ctags.py',
+            \ 'ctagsargs' : '-f - --sort=yes',
+            \ 'kinds' : [
+            \ 's:sections',
+            \ 'i:images'
+            \ ],
+            \ 'sro' : '|',
+            \ 'kind2scope' : {
+            \ 's' : 'section',
+            \ },
+            \ 'sort': 0,
+            \ }
 
 "关闭排序,即按标签本身在文件中的位置排序
 let g:tagbar_sort = 0
@@ -147,8 +147,8 @@ let g:tagbar_show_linenumbers = -1
 
 "Plug 'dyng/ctrlsf.vim'
 let g:ctrlsf_auto_focus = {
-    \ "at": "start"
-    \ }
+            \ "at": "start"
+            \ }
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 键盘映射
@@ -224,8 +224,8 @@ vmap <Space>u <Plug>CtrlSFVwordExec
 
 "高亮当前单词
 "nnoremap <F8> :match incsearch /\<<C-R>=expand("<cword>")<CR>\>/ <CR>
-nnoremap <F8> :silent! let @/ = "\\<<C-R>=expand("<cword>")<CR>\\>" <CR>:set hls<CR>
-nnoremap <Space>i :silent! let @/ = "\\<<C-R>=expand("<cword>")<CR>\\>" <CR>:set hls<CR>
+nnoremap <silent><F8> :silent! let @/ = "\\<<C-R>=expand("<cword>")<CR>\\>" <CR>:set hls<CR>
+nnoremap <silent><Space>i :silent! let @/ = "\\<<C-R>=expand("<cword>")<CR>\\>" <CR>:set hls<CR>
 
 nnoremap <F9> :TagbarOpen fj<CR>
 nnoremap <Space>o :TagbarToggle<CR>
@@ -273,13 +273,13 @@ omap ac <Plug>(coc-classobj-a)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  elseif (coc#rpc#ready())
-    call CocActionAsync('doHover')
-  else
-    execute '!' . &keywordprg . " " . expand('<cword>')
-  endif
+    if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+    elseif (coc#rpc#ready())
+        call CocActionAsync('doHover')
+    else
+        execute '!' . &keywordprg . " " . expand('<cword>')
+    endif
 endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -327,10 +327,10 @@ endfunc
 
 "记忆文件关闭时光标位置
 if has("autocmd")
-      autocmd BufReadPost *
-          \ if line("'\"") > 0 && line("'\"") <= line("$") |
-          \   exe "normal g`\"" |
-          \ endif
+    autocmd BufReadPost *
+                \ if line("'\"") > 0 && line("'\"") <= line("$") |
+                \   exe "normal g`\"" |
+                \ endif
 endif
 
 au FileType c setlocal dict+=~/.vim/dict/c.dict
@@ -349,6 +349,6 @@ au FileType html setlocal dict+=~/.vim/dict/css.dict
 
 " 防止tmux下vim的背景色显示异常
 if &term =~ '256color'
-  set t_ut=
+    set t_ut=
 endif
 
