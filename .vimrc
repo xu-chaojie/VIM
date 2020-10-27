@@ -6,7 +6,7 @@ set nocompatible  "去掉讨厌的有关vi一致性模式，避免以前版本�
 
 "General
 filetype plugin indent on     " required!
-syntax on
+syntax enable
 
 set mouse=a " 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
 set clipboard=unnamed
@@ -14,6 +14,8 @@ set nobackup                     "不自动保存
 set noswapfile
 set undofile
 set undodir=~/.vim/.undo//
+"打开文件监视。如果在编辑过程中文件发生外部改变（比如被别的编辑器编辑了），就会发出提示
+set autoread
 
 set iskeyword+=_  " 单词分割
 set iskeyword-=. " '.' is an end of word designator
@@ -31,6 +33,7 @@ set cc=81 "高亮第81列
 set hlsearch "搜索逐字符高亮
 set incsearch "随着键入即时搜索
 "set ignorecase "搜索时忽略大小写
+set ruler
 set wildmenu
 set wildmode=list:longest,full
 set whichwrap+=<,>,h,l
@@ -40,6 +43,10 @@ set showcmd         " 输入的命令显示出来，看的清楚些
 set confirm         " 在处理未保存或只读文件的时候，弹出确认
 "set autochdir       " 打开文件时自动切换到文件所在的目录
 set vb t_vb= "去掉错误提示声音
+"如果 CTRL-N 和 CTRL-P 补全时查找所包含的头文件，耗时会比较久。此时，可以在 complete 选项中去掉 i 标记
+set complete-=i
+"CTRL-A 和CTRL-X处理数字时去掉按8进制方式
+set nrformats-=octal
 
 "如果行尾有多余的空格（包括 Tab 键），该配置将让这些空格显示成可见的小方块
 set listchars=tab:»\ ,trail:·
