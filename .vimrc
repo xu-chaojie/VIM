@@ -14,7 +14,7 @@ set nobackup                     "不自动保存
 set noswapfile
 set undofile
 set undodir=~/.vim/.undo//
-"打开文件监视。如果在编辑过程中文件发生外部改变（比如被别的编辑器编辑了），就会发出提示
+" 当文件被外部程序改变，并且没有被vim改变时，自动读取它
 set autoread
 
 set iskeyword+=_  " 单词分割
@@ -49,7 +49,7 @@ set complete-=i
 set nrformats-=octal
 
 "如果行尾有多余的空格（包括 Tab 键），该配置将让这些空格显示成可见的小方块
-set listchars=tab:»\ ,trail:·
+set listchars=tab:»\ ,trail:■
 "显示行尾
 set list
 
