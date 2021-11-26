@@ -2,8 +2,18 @@
    "languageserver": {
    "clangd": {
      "command": "clangd",
-     "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+     "rootPatterns": [".git/", "compile_flags.txt", "compile_commands.json"],
      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
+    },
+    "golang": {
+        "command": "~/go/bin/go-langserver",
+        "rootPatterns": [".git/"],
+        "filetypes": ["go"],
+        "initializationOptions": {
+        "gocodeCompletionEnabled": true,
+        "diagnosticsEnabled": true,
+        "lintTool": "golint"
+        }
     }
   }
 }
