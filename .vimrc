@@ -48,8 +48,8 @@ set complete-=i
 "CTRL-A 和CTRL-X处理数字时去掉按8进制方式
 set nrformats-=octal
 
-"如果行尾有多余的空格（包括 Tab 键），该配置将让这些空格显示成可见的小方块
-set listchars=tab:»\ ,trail:■
+"如果行尾有多余的空格（或 Tab 键），该配置将让这些空格成对应字符
+set listchars=tab:»\ ,trail:-
 "显示行尾
 set list
 
