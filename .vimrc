@@ -165,6 +165,11 @@ nnoremap <F2> :NERDTreeFind<CR>
 inoremap <F2> <ESC> :NERDTreeFind<CR>
 nnoremap <Space>w :NERDTreeToggle<CR>
 
+"去除行尾空格
+nnoremap <F3> :%s/\s\+$//e<CR>
+inoremap <F3> <ESC> :%s/\s\+$//e<CR>
+nnoremap <Space>e :%s/\s\+$//e<CR>
+
 "切换头文件与源文件
 nnoremap <F4> :FSHere<CR>
 nnoremap <Space>r :FSHere<CR>
