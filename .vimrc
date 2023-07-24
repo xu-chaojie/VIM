@@ -91,6 +91,9 @@ Plug 'preservim/tagbar'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+"need vim9, and exec ':Copilot setup' after PlugInstall
+Plug 'github/copilot.vim'
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Raimondi/delimitMate'
 
@@ -155,6 +158,9 @@ let g:tagbar_show_linenumbers = -1
 let g:ctrlsf_auto_focus = {
             \ "at": "start"
             \ }
+
+"Plug 'neoclide/coc.nvim'
+let g:coc_disable_startup_warning = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 键盘映射
@@ -354,6 +360,9 @@ au FileType scale setlocal dict+=~/.vim/dict/scale.dict
 au FileType php setlocal dict+=~/.vim/dict/php_funclist.dict
 au FileType html setlocal dict+=~/.vim/dict/javascript.dict
 au FileType html setlocal dict+=~/.vim/dict/css.dict
+
+" 由于copilot插件的关系，关闭自动注释，避免注释行下一行自动添加注释导致困扰
+au filetype * setlocal formatoptions-=cro
 
 "自动删除行尾空格
 "autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> %s/\s\+$//e
