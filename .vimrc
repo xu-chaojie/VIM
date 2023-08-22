@@ -162,6 +162,14 @@ let g:ctrlsf_auto_focus = {
 "Plug 'neoclide/coc.nvim'
 let g:coc_disable_startup_warning = 1
 
+"Plug 'github/copilot.vim'
+let g:copilot_filetypes = {
+    \ '*': v:true,
+    \ }
+
+" 由于copilot插件的关系，关闭自动注释，避免注释行下一行自动添加注释导致困扰
+au filetype * setlocal formatoptions-=cro
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 键盘映射
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -299,6 +307,10 @@ function! s:show_documentation()
     endif
 endfunction
 
+" copilot next & previous
+inoremap <C-J> <Plug>(copilot-next)
+inoremap <C-K> <plug>(copilot-previous)
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 新文件标题
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -360,9 +372,6 @@ au FileType scale setlocal dict+=~/.vim/dict/scale.dict
 au FileType php setlocal dict+=~/.vim/dict/php_funclist.dict
 au FileType html setlocal dict+=~/.vim/dict/javascript.dict
 au FileType html setlocal dict+=~/.vim/dict/css.dict
-
-" 由于copilot插件的关系，关闭自动注释，避免注释行下一行自动添加注释导致困扰
-au filetype * setlocal formatoptions-=cro
 
 "自动删除行尾空格
 "autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> %s/\s\+$//e
