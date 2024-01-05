@@ -198,7 +198,7 @@ func! CompileRunGcc()
         exec "!g++ % -o %<"
         exec "!time ./%<"
     elseif &filetype == 'cpp'
-        exec "!g++ % -std=c++14 -g -o %<"
+        exec "!g++ % -std=c++14 -fsanitize=address -g -o %<"
         exec "!time ./%<"
     elseif &filetype == 'java'
         exec "!javac %"
