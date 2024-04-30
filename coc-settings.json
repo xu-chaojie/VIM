@@ -6,14 +6,10 @@
      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
     },
     "golang": {
-        "command": "~/go/bin/go-langserver",
+        "command": "~/go/bin/gopls",
         "rootPatterns": [".git/"],
-        "filetypes": ["go"],
-        "initializationOptions": {
-        "gocodeCompletionEnabled": true,
-        "diagnosticsEnabled": true,
-        "lintTool": "golint"
-        }
+        "filetypes": ["go"]
     }
   }
 }
+
